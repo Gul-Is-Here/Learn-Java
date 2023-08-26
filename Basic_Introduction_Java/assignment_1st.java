@@ -1,4 +1,4 @@
-package Day1;
+package Basic_Introduction_Java;
 
 public class assignment_1st {
     public static void main(String args[]) {

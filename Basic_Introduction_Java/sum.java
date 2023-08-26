@@ -1,4 +1,4 @@
-package Day1;
+package Basic_Introduction_Java;
 
 import java.util.*;
 

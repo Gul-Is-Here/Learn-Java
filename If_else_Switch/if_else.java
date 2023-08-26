@@ -1,4 +1,4 @@
-package Day2;
+package If_else_Switch;
 
 import java.util.*;
 

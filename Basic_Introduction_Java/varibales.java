@@ -1,4 +1,4 @@
-package Day1;
+package Basic_Introduction_Java;
 
 public class varibales {
     public static void main(String[] args) {
