@@ -1,19 +1,41 @@
 package Loops_In_Java;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class check_prime {
-    public static void main(String[] argds) {
-        Scanner scan = new Scanner(System.in);
-        int prime = scan.nextInt();
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
 
-        for (int i = 2; i < prime / 2; i++) {
-            if (prime % i == 1) {
-                System.out.println("prime");
-            } else {
-                System.out.println("kk");
-            }
+        boolean isPrime = checkPrime(number);
 
+        if (isPrime) {
+            System.out.println(number + " is a prime number.");
+        } else {
+            System.out.println(number + " is not a prime number.");
         }
+    }
+
+    public static boolean checkPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+
+        if (num <= 3) {
+            return true;
+        }
+
+        if (num % 2 == 0 || num % 3 == 0) {
+            return false;
+        }
+
+        for (int i = 5; i * i <= num; i += 6) {
+            if (num % i == 0 || num % (i + 2) == 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
